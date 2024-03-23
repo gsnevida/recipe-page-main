@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --bg-color: hsl(30, 54%, 90%);
+    --card-color: hsl(0, 0%, 100%);
+    --h1-color: hsl(24, 5%, 18%);
+    --h2-color: hsl(14, 45%, 36%);
+    --h3-color: hsl(332, 51%, 32%);
+    --aside-bg-color: hsl(330, 100%, 98%);
+    --line-color: hsl(30, 18%, 87%);
+    --bold-color: hsl(30, 10%, 34%);
+
+    --fs: 16px;
+    --ff-title: "Young Serif", Arial, sans-serif;
+    --ff-text: "Outfit", Arial, sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fw-extrabold: 700;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--ff-text);
+}
+
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--card-color);
+    max-width: 720px;
+    border-radius: 10px;
+    margin: 100px 0px 50px 0px;
+}
+
+@media (max-width: 740px) {
+    .card {
+        margin: 0px;
+    }
+}
+
+.card .container {
+    margin: 45px;
+
+}
+
+.card .container header {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.card .container header img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card .container header h1 {
+    font-family: var(--ff-title);
+    font-size: 40px;
+    color: var(--h1-color);
+}
+
+.card .container header p {
+    font-size: var(--fs);
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 23px;
+    margin-top: 18px;
+}
+
+.card .container aside {
+    margin: 30px 0px;
+    background-color: var(--aside-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card .container aside h3 {
+    color: var(--h3-color);
+}
+
+.card .container aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 25px 0px 0px 25px;
+    color: var(--h3-color)
+}
+
+.card .container aside ul li p {
+    font-size: var(--fs);
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.card .container aside ul li p strong {
+    color: var(--bold-color);
+}
+
+.card .container main .sect {
+    margin: 30px 0px;
+}
+
+.card .container main .sect h2 {
+    font-family: var(--ff-title);
+    font-weight: var(--fw-normal);
+    color: var(--h2-color);
+}
+
+.card .container main .sect ul,
+.card .container main .sect ol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0px 0px 25px;
+    color: var(--h2-color);
+}
+
+.card .container main .sect  ul li p,
+.card .container main .sect  ol li p {
+    font-size: var(--fs);
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.card .container main .sect .nutrition-desc {
+    font-size: var(--fs);
+    color: rgba(0, 0, 0, 0.6);
+    margin: 25px 0px;
+}
+
+.card .container main .table {
+    margin: 20px;
+    text-align: center;
+}
+
+.card .container main .table .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 80px;
+}
+
+.table .row .nutrient {
+    font-size: var(--fs);
+}
+
+.table .row .value {
+    font-size: var(--fs);
+    font-weight: var(--fw-extrabold);
+    color: var(--h2-color);
+}
